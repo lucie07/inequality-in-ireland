@@ -1,0 +1,409 @@
+body {
+    /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif !important;*/
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 300;
+    /*background-color: #666699 !important    ;*/
+    /*font-size: 16px;*/
+}
+
+/*#barCharts .p{*/
+/*    font-size: 12px!important;*/
+/*}*/
+
+.factor-name {
+    font-size: 14px;
+    text-transform: uppercase;
+/*padding:0 !important;*/
+}
+
+.countyName{
+    font-size: 14px !important;
+}
+
+
+#map {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    /*height: 100%;*/
+    margin-top: 90px;
+    z-index: 1;
+    /*right:10px;*/
+    /*left:135px;*/
+}
+
+#storyText{
+        position: relative;
+    /*background-color: #666699;*/
+        /*margin-top: 25%;*/
+}
+
+.LocationB .bar {
+
+    fill: #519E75;
+}
+
+/*.LocationB {*/
+/*    color: #519E75;*/
+/*}*/
+
+
+.LocationA .bar {
+    fill:   #E6A429;
+}
+
+/*.LocationA {*/
+/*    color: #E6A429;*/
+/*}*/
+.axis {
+    font-size: 16px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    display: none;
+}
+
+.label {
+    font-size: 10px;}
+
+.jumbotron{
+    border-radius: 0;
+}
+
+#form {
+    background-color: #69b8c5;
+    color: white;
+}
+
+#form2 {background-color: white;
+color: black;
+}
+
+.legend {
+    background-color: #fff;
+    border-radius: 3px;
+    bottom: 30px;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.2);
+    padding: 10px;
+    display:block;
+    position: fixed;
+    right: 50px;
+    z-index: 1;
+    width:450px;
+}
+.legend img {
+    width:100%;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 13px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: fixed;
+    display: inline-block;
+    right:200px;
+    z-index: 1;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute !important;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content input label{
+
+    display: inline;
+}
+.dropdown-content span{
+    display:block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*navigation*/
+.logo{
+    color: white;
+}
+
+.navigation2{
+    height: 90px !important;
+    background-color: #69b8c5;
+
+
+}
+
+.nav2 a{
+    color: white !important;
+    font-size: 16px;
+    font-weight:100;
+    text-transform: uppercase;
+    margin-right: 50px;
+    width: 100%;
+}
+
+.nav-active a{
+    color: white !important;
+    font-size: 16px;
+    font-weight:600;
+    text-transform: uppercase;
+    margin-right: 50px;
+    width: 100%;
+}
+
+#navbarNav{
+margin-left: 20%;
+}
+
+
+.navigation{
+    /*border: 2px solid black;*/
+    width: 100%;
+    min-width: 980px;
+    height: 90px;
+    padding: 0;
+    background-color: #66cc99;
+    /*position: fixed;*/
+}
+
+div.nav-icon{
+    width:500px;
+    height:60px;
+    margin-left: 10px;
+    margin-top: 15px;
+    /*border: 2px solid red;*/
+    float: left;
+}
+div.logo{
+    width:240px;
+    height:60px;
+    float: left;
+    border: 2px solid red;
+    font-family: "Helvetica Neue";
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFFFFF;
+    opacity: 30%;
+}
+
+div.mode{
+    width:200px;
+    height:60px;
+    float:right;
+    /*border:2px solid red;*/
+    margin-left: 20px;
+}
+
+.mode p{
+    /*font-family: "Helvetica Neue";*/
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /*padding-top: 5%;*/
+}
+
+a{
+    /*font-family: "Helvetica Neue";*/
+    font-size: 12px;
+    font-weight: bold;
+    color:#D6D6D6;
+    text-decoration: none;
+    margin: 2px;
+    /*padding-top: 5%;*/
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu{
+    background-color: #69b8c5 !important;
+    border: none;
+    border-radius: 0;
+
+}
+
+
+
+.dropdown-item{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+/*.search{*/
+/*    width: 30%;*/
+/*    margin: 30px 10px;*/
+/*    display: flex;*/
+/*    !*border: 1px solid red;*!*/
+/*    float: right;*/
+/*}*/
+
+/*.search input{*/
+/*    float: right;*/
+/*    flex: 4;*/
+/*    height: 30px;*/
+/*    outline: none;*/
+/*    border: 1px solid #D6D6D6;*/
+/*    box-sizing: border-box;*/
+/*    padding-left: 5%;*/
+/*}*/
+
+/*.search button{*/
+/*    float: right;*/
+/*    flex: 1;*/
+/*    height: 30px;*/
+/*    background-color: #0000BA;*/
+/*    color: white;*/
+/*    border-style: none;*/
+/*    outline: none;*/
+/*}*/
+
+/*.search button i{*/
+/*    font-style: normal;*/
+/*}*/
+
+/*.search button:hover{*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*map*/
+.geocoder {
+    /*position: absolute;*/
+    z-index: 1;
+    margin-top: 20px;
+    /*left: 95% !important;*/
+    width: 100% !important;
+    /*min-width: 300px !important;*/
+    /*left: 25% !important;*/
+    /*margin-left: 20%;*/
+    /*top: 10px;*/
+    font-family: "Open Sans", sans-serif;
+
+
+}
+
+
+
+.mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+    border-radius: 0px !important;
+    border: 1px solid #b1b4ba;
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+/*This is the map settings*/
+/*#menu{*/
+/*    background-color: #fff;*/
+/*    !*border-radius: 3px;*!*/
+/*    !*bottom: 30px;*!*/
+/*    !*box-shadow: 0 4px 6px 0 rgba(0,0,0,.2);*!*/
+/*    !*padding: 10px;*!*/
+/*    display:block;*/
+/*    position: absolute;*/
+/*    right: 50px;*/
+/*    z-index: 1;*/
+/*    width:400px;*/
+
+/*}*/
+
+/*Explore Page only*/
+/*.data{*/
+/*    font-size: 30px;*/
+/*}*/
+
+.range-data{
+
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.story-title{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.story-map .axis{
+    color: black;
+}
+
+
+
+.factor-height{
+    min-height: 50px;
+    margin:10px 0 !important;
+    padding: 0px !important;
+}
+
+#storyText{
+    overflow: auto;
+}
+
+/*Scroll Bar Style*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.empty {
+    height: 10px;
+}
+
+/*buttons for the location lock in*/
+.btn {
+    background-color: white;
+    border: none;
+    color: grey;
+    padding: 5px 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}

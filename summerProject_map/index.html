@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summer Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+    <div id='map'></div>
+    <div class='quakeInfo'>
+    <div><strong>HP Score:</strong> <span id='hps'></span></div>
+    <div><strong>Location:</strong> <span id='loc'></span></div>
+</div>
+
+<!--<div id="menu">-->
+<!--    <input id="ckchju9z025az1il7rp0kgocs" type="radio" name="rtoggle" value="ckchju9z025az1il7rp0kgocs" checked="checked"/>-->
+<!--    <label for="ckchju9z025az1il7rp0kgocs">HP score</label>-->
+<!--    <input id="ckct2q9bx2edj1iqh31puc4uh" type="radio" name="rtoggle" value="ckct2q9bx2edj1iqh31puc4uh" />-->
+<!--    <label for="ckct2q9bx2edj1iqh31puc4uh">totpop16</label>-->
+<!--    <input id="ckcki8ew727og1jo56uik1y9a" type="radio" name="rtoggle" value="ckcki8ew727og1jo56uik1y9a" />-->
+<!--    <label for="ckcki8ew727og1jo56uik1y9a">educ</label>-->
+<!--</div>-->
+
+<div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div id="menu" class="dropdown-content">
+        <span>
+            <input id="ckd63pgex17xo1hmh9cite56s" type="radio" name="rtoggle" value="ckd63pgex17xo1hmh9cite56s" checked="checked"/>
+            <label for="ckd63pgex17xo1hmh9cite56s">Deprivation Score</label>
+        </span>
+        <span>
+            <input id="ckct2q9bx2edj1iqh31puc4uh" type="radio" name="rtoggle" value="ckct2q9bx2edj1iqh31puc4uh" />
+            <label for="ckct2q9bx2edj1iqh31puc4uh">Total Population 2016 Number</label>
+        </span>
+        <span>
+            <input id="ckczzhgu10jj01ipggsuayv80" type="radio" name="rtoggle" value="ckczzhgu10jj01ipggsuayv80" />
+            <label for="ckczzhgu10jj01ipggsuayv80">Population Change </label>
+        </span>
+        <span>
+            <input id="ckd09ui420tkr1io3ge2jxa82" type="radio" name="rtoggle" value="ckd09ui420tkr1io3ge2jxa82" />
+            <label for="ckd09ui420tkr1io3ge2jxa82">Age Dependency Ratio</label>
+        </span>
+        <span>
+            <input id="ckd0ac4zo0u4s1irx1w9ogprd" type="radio" name="rtoggle" value="ckd0ac4zo0u4s1irx1w9ogprd" />
+            <label for="ckd0ac4zo0u4s1irx1w9ogprd">Lone Parent Ratio</label>
+        </span>
+        <span>
+            <input id="ckd0arukt0uia1inyud8l4y9z" type="radio" name="rtoggle" value="ckd0arukt0uia1inyud8l4y9z" />
+            <label for="ckd0arukt0uia1inyud8l4y9z">Education Primary only</label>
+        </span>
+        <span>
+            <input id="ckd0cqbye0wgn1iob9ihxn98v" type="radio" name="rtoggle" value="ckd0cqbye0wgn1iob9ihxn98v" />
+            <label for="ckd0cqbye0wgn1iob9ihxn98v">Educattion Higher</label>
+        </span>
+        <span>
+            <input id="ckd0czvul0wk81ipgll9twc29" type="radio" name="rtoggle" value="ckd0czvul0wk81ipgll9twc29" />
+            <label for="ckd0czvul0wk81ipgll9twc29">High Skilled Labour</label>
+        </span>
+        <span>
+            <input id="ckd0d9u2f0wxv1ioiferdiuyq" type="radio" name="rtoggle" value="ckd0d9u2f0wxv1ioiferdiuyq" />
+            <label for="ckd0d9u2f0wxv1ioiferdiuyq">Low Skilled Labour</label>
+        </span>
+        <span>
+            <input id="ckd0dxkjy0xka1invcfjss43t" type="radio" name="rtoggle" value="ckd0dxkjy0xka1invcfjss43t" />
+            <label for="ckd0dxkjy0xka1invcfjss43t">Unemployed Male</label>
+        </span>
+        <span>
+            <input id="ckd0efxpf0y5z1imo9hx65ik8" type="radio" name="rtoggle" value="ckd0efxpf0y5z1imo9hx65ik8" />
+            <label for="ckd0efxpf0y5z1imo9hx65ik8">Unemployed Female</label>
+        </span>
+        <span>
+            <input id="ckd0er0y60f8y1in83ewdtpku" type="radio" name="rtoggle" value="ckd0er0y60f8y1in83ewdtpku" />
+            <label for="ckd0er0y60f8y1in83ewdtpku">Persons per Room</label>
+        </span>
+    </div>
+</div>
+
+<div id="county-legendContainer" class="legend">
+    <img id="county-legend" src="legendImg/c_hp2016.png"/>
+</div>
+
+<div id="smallArea-legendContainer" class="legend">
+    <img id="smallArea-legend" src="legendImg/s_hp2016.png"/>
+
+</div>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>

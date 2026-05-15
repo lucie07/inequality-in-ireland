@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summer Project</title>
+    <link rel="stylesheet" href="generalStory.css"rel='stylesheet'/>
+    <!--    <link rel="stylesheet" href="bootstrap.css"rel='stylesheet'/>-->
+    <link rel="stylesheet" href="b2.css"rel='stylesheet'/>
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+
+    <!-- CSS only -->
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet'/>
+    <!--    <link rel="stylesheet" href="../CSS/style.css"rel='stylesheet'/>-->
+
+
+
+
+</head>
+<body  style="overflow: hidden;">
+
+<nav class="navigation2 navbar navbar-expand-lg" style="z-index: 26;" >
+    <a class="navbar-brand logo" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class=" navbar-nav">
+            <li class="nav2 nav-item">
+                <a class="nav-link" href="../Exploration.html">Explore</a>
+            </li>
+            <li class="nav2 nav-item">
+                <a class="nav-link" href="../test3.html">Compare</a>
+            </li>
+            <li class="nav2 nav-item nav-active active" style="position: relative;">
+                <a class="nav-link dropdown-toggle "  href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Story Maps<span class="sr-only">(current)</span></a>
+                <div class="dropdown-menu" aria-labelledby="storymapsDropdown">
+                    <a class="dropdown-item" href="../dublinStory/dublinStory.html">Dublin</a>
+                    <a class="dropdown-item" href="../limerickStory/limerickStory.html">Limerick</a>
+                    <a class="dropdown-item  nav-active active" href="#" >General Story<span class="sr-only">(current)</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../healthStory/healthStory.html">Deprivation Outcomes: Health</a>
+                </div>
+            </li>
+            <li class="nav2 nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+
+
+        </ul>
+    </div>
+</nav>
+
+
+<div id='map'></div>
+<div class='quakeInfo' style="display: none;">
+    <div><strong>HP Score:</strong> <span id='hps'></span></div>
+    <div><strong>Location:</strong> <span id='loc'></span></div>
+    <div id="storytxt-edu"></div>
+    <div id="storytxt-unem"></div>
+</div>
+
+
+<div class="panel-group" id="accordion" style="position: relative; height: calc(100vh - 150px); padding-bottom: 20px; overflow: auto;">
+    <div class="panel panel-warning" >
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                   href="#lmt">
+                    LABOUR MARKET
+                </a>
+            </h4>
+        </div>
+        <div id="lmt" class="panel-collapse collapse">
+            <div class="panel-body">
+                The labour market is used to describe the relationship between the workplace (available employment) and the workforce including Unemployed Male is and Unemployed Female.Having a job helps individuals stay connected with society, build self-esteem, and develop skills and competencies. Societies with high levels of employment are also richer, more politically stable and healthier. Despite MEATH, men are still less likely than women to have a job in Ireland.
+            </div>
+            <div class="panel-body" id="lmm"></div>
+            <div class="panel-body" id="lmf"></div>
+        </div>
+    </div>
+    <!--    end-->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                   href="#dpt">
+                    DEMOGRAPHIC PROFILE
+                </a>
+            </h4>
+        </div>
+        <div id="dpt" class="panel-collapse collapse">
+            <div class="panel-body">
+                Development shapes population trends. The reverse is also true: population trends can impede or hasten development.
+            </div>
+            <div class="panel-body" id="dptot"></div>
+            <div class="panel-body" id="dpchg"></div>
+        </div>
+    </div>
+    <!--   end-->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                   href="#edut">
+                    EDUCATION
+                </a>
+            </h4>
+        </div>
+        <div id="edut" class="panel-collapse collapse">
+            <div class="panel-body" id="edu">
+                Education plays a key role in providing individuals with the knowledge, skills and competences required to participate effectively in society and in the economy.
+            </div>
+            <div class="panel-body" id="eduh"></div>
+            <div class="panel-body" id="edul"></div>
+        </div>
+    </div>
+    <!--   end-->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                   href="#het">
+                    HEALTH
+                </a>
+            </h4>
+        </div>
+        <div id="het" class="panel-collapse collapse">
+            <div class="panel-body" >
+                Good health is one of the most important things to people and also brings many other benefits, including enhanced access to education and the job market, an increase in productivity and wealth.
+            </div>
+            <div class="panel-body" id="he"></div>
+
+        </div>
+    </div>
+    <!--   end-->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                   href="#scct">
+                    SOCIAL CLASS COMPOSITION
+                </a>
+            </h4>
+        </div>
+        <div id="scct" class="panel-collapse collapse">
+            <div class="panel-body">
+                Social class refers to the grouping of individuals in a stratified hierarchy based on High Skilled or Low Skilled Labour.
+            </div>
+
+            <div class="panel-body" id="scc">
+
+            </div>
+        </div>
+    </div>
+    <!--   end-->
+
+</div>
+
+
+<div id="county-legendContainer" class="legend">
+    <img id="county-legend" src="legendImg/c_hp2016.png"/>
+</div>
+
+<div id="smallArea-legendContainer" class="legend">
+    <img id="smallArea-legend" src="legendImg/s_hp2016.png"/>
+
+</div>
+
+
+<script src="generalStory.js"></script>
+</body>
+</html>

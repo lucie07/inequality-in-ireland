@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <title>Limerick City - The Most Underprivileged City in Ireland</title>
+
+    <link rel="stylesheet" href="../CSS/limerickStory.css" />
+    <link rel="stylesheet" href="../CSS/b3.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+
+    <script src="../highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="../accessibility.js"></script>
+
+
+
+</head>
+<body>
+<nav class="navigation2 navbar navbar-expand-lg" style="z-index: 26;" >
+    <a class="navbar-brand logo" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class=" navbar-nav">
+            <li class="nav2 nav-item">
+                <a class="nav-link" href="../Exploration.html">Explore</a>
+            </li>
+            <li class="nav2 nav-item">
+                <a class="nav-link" href="../test3.html">Compare</a>
+            </li>
+            <li class="nav2 nav-item nav-active active" style="position: relative;">
+                <a class="nav-link dropdown-toggle "  href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Story Maps<span class="sr-only">(current)</span></a>
+                <div class="dropdown-menu" aria-labelledby="storymapsDropdown">
+                    <a class="dropdown-item" href="../dublinStory/dublinStory.html">Dublin</a>
+                    <a class="dropdown-item nav-active nav-item active" href="#">Limerick<span class="sr-only">(current)</span></a>
+                    <a class="dropdown-item" href="../generalStory/generalStory.html">General Story</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../healthStory/healthStory.html">Deprivation Outcomes: Health</a>
+                </div>
+            </li>
+            <li class="nav2 nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<section>
+    <div id="videoTxt">
+        <p style="z-index: 999;">Limerick City - The Most Underprivileged City in Ireland</p>
+    </div>
+    <video src="limerick.mp4" muted autoplay
+           loop></video>
+</section>
+
+<div id="map"></div>
+<div id="story"></div>
+<div id="legend"></div>
+
+
+<script  src="limerickStory.js"></script>
+
+
+
+
+</body>
+</html>

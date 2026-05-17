@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionaire</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <script src="localStorageForm.js"></script>
+
+
+</head>
+<body id="form">
+
+<div id="form2" class="jumbotron col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 mt-5">
+    <h6 class="card-title h2 text-center" style="font-size: 22px;">PERMISSION TO USE COOKIES</h6>
+
+<p>In order to personalise and maximise your experience we would like to use cookies.
+    If you agree, please fill out the form below and press accept. </p>
+
+<form name="form1" id="registration_form"     action="/update" method="post" onsubmit="myFunction()">
+    <div class="mb-3 mt-4">
+        <p>Do you know what Deprivation Index is?</p>
+    </div>
+    <div class="form-check form-check-inline ">
+        <input type="radio" id="yes" class="form-check-input" name="priorKnowledge" value="yes">
+        <label class="form-check-label" for ="yes">Yes</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" id="no" class="form-check-input" name="priorKnowledge" value="no">
+        <label class="form-check-label" for="no">No</label>
+    </div>
+    <div class="mb-3 mt-4">
+        <p>What is the purpose of your visit?</p>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" id="professional" class="form-check-input" name="purpose" value="professional">
+        <label class="form-check-label" for ="professional">Professional Research</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" id="personal" class="form-check-input" name="purpose" value="personal">
+        <label class="form-check-label" for ="personal">Personal Research</label>
+    </div>
+    <div class="mb-3 mt-4">
+        <p>What topics are you interested in?</p>
+    </div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" id="labour" class="custom-control-input" name="labour" value="labour">
+        <label class="custom-control-label" for ="labour">Labour Market Situation</label>
+    </div>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" id="demographic" class="custom-control-input" name="demographic" value="demographic">
+        <label class="custom-control-label" for ="demographic">Demographic Profile</label>
+    </div>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" id="education" class="custom-control-input" name="education" value="education">
+        <label class="custom-control-label" for ="education">Education</label>
+    </div>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" id="health" class="custom-control-input" name="health" value="health">
+        <label class="custom-control-label" for ="health">Health</label>
+    </div>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" id="social" class="custom-control-input" name="social" value="social">
+        <label class="custom-control-label" for ="social">Social Class Composition</label>
+    </div>
+    <div class="pt-2">
+    <input type="submit" class="btn btn-primary mr-3" value="Accept">
+    <a href="generalStory/generalStory.html">
+
+        <input type="button" class="btn btn-primary" value="Skip"></a>
+    </div>
+
+</form>
+
+<!--    <form method="post" action="/update">-->
+<!--    <input type="radio" id="sushi" value="sushi" name="sushi">-->
+<!--    <label for="sushi">Sushi</label>-->
+<!--    <button type="submit">Enter</button>-->
+<!--</form>-->
+
+</div>
+</body>
+
+
+</html>

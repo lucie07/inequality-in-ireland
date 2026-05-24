@@ -1,0 +1,209 @@
+html{
+    height: 100%;
+    width:100%;
+    min-width: 768px;
+}
+
+body{
+    height: 100%;
+    width:100%;
+    min-width: 768px;
+}
+
+.navigation{
+    /*border: 2px solid black;*/
+    width: 100%;
+    min-width: 980px;
+    height: 90px;
+    padding: 0;
+    background-color: #66cc99;
+    /*position: fixed;*/
+}
+
+div.nav-icon{
+    width:500px;
+    height:60px;
+    margin-left: 10px;
+    margin-top: 15px;
+    /*border: 2px solid red;*/
+    float: left;
+}
+div.logo{
+    width:240px;
+    height:60px;
+    float: left;
+    border: 2px solid red;
+    font-family: "Helvetica Neue";
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFFFFF;
+    opacity: 30%;
+}
+
+div.mode{
+    width:200px;
+    height:60px;
+    float:right;
+    /*border:2px solid red;*/
+    margin-left: 20px;
+}
+
+p{
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /*padding-top: 5%;*/
+}
+
+a{
+    font-family: "Helvetica Neue";
+    font-size: 12px;
+    font-weight: bold;
+    color:#D6D6D6;
+    text-decoration: none;
+    margin: 2px;
+    /*padding-top: 5%;*/
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.search{
+    width: 30%;
+    margin: 30px 10px;
+    display: flex;
+    /*border: 1px solid red;*/
+    float: right;
+}
+
+.search input{
+    float: right;
+    flex: 4;
+    height: 30px;
+    outline: none;
+    border: 1px solid #D6D6D6;
+    box-sizing: border-box;
+    padding-left: 5%;
+}
+
+.search button{
+    float: right;
+    flex: 1;
+    height: 30px;
+    background-color: #0000BA;
+    color: white;
+    border-style: none;
+    outline: none;
+}
+
+.search button i{
+    font-style: normal;
+}
+
+.search button:hover{
+    font-size: 16px;
+}
+
+#main-page{
+    width: auto;
+    min-width: 1000px;
+    height: 100%;
+    /*border: 2px solid red;*/
+}
+
+
+div.dashboard{
+    width: 30%;
+    min-width:300px;
+    height:100%;
+    background-color: #666699;
+    /*border: 2px solid red;*/
+    float: left;
+}
+
+#current-location{
+    width:80%;
+    min-width:250px;
+    height:10%;
+    background-color: #66cc99;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 10%;
+    box-shadow:3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#current-location-name{
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-top: 5%;
+
+}
+
+#HP-index{
+    margin: 5% 10%;
+    width:80%;
+    min-width:250px;
+    height:10%;
+    background-color: #66cc99;
+    text-align: center;
+    box-shadow:3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#HP-index-score{
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-top: 5%;
+}
+
+#total-population{
+    margin: 5% 10%;
+    width:80%;
+    min-width:250px;
+    height:10%;
+    background-color: #66cc99;
+    text-align: center;
+    box-shadow:3px 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+#population {
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-top: 5%;
+}
+
+#fix-location, #fix-score, #fix-population {
+    font-family: "Helvetica Neue";
+    font-size: 12px;
+    font-weight: normal;
+    color: #D6D6D6;
+    margin-top: 5%;
+}
+
+#map-view{
+    float: right;
+    position: relative;
+    width: 70%;
+    min-width: 680px;
+    height: 100%;
+    /*border: 2px solid red;*/
+    margin: 0;
+    background-color: #D6D6D6;
+    text-align: center;
+    font-size: 72px;
+    font-family: "Helvetica Neue";
+    font-weight: normal;
+    color: white;
+    opacity: 30%;
+
+}

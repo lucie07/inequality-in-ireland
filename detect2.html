@@ -1,0 +1,93 @@
+<!--The location detector, map is supported by Esri, ArcGIS. and ArcGIS API-->
+<!--not based on mapbox.-->
+<!--this page displays user's location to integrate and align the data.-->
+
+<!--do not contains folders, yes a single html file-->
+<!--location detector: only visible under the search box atm-->
+<!--auto detect user's location: not working atm-->
+<!--Type and search for an address: yes works-->
+<!--search for Eircode: yes works-->
+<!--showing the name of the searched location: yes-->
+<!--the info window of the search result is not customizable-->
+<!--the pop up window of location detection: don't have one atm-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>detector4</title>
+
+    <style>
+        html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 90%;
+            width: 90%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.16/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.16/"></script>
+
+    <script>
+        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/widgets/Search"
+        ], function(Map, MapView, Search) {
+
+            var map = new Map({
+                basemap: "topo-vector"
+            });
+
+            var view = new MapView({
+                container: "viewDiv",
+                map: map,
+                center: [-7.4935, 52.999],
+                zoom: 6.8
+            });
+
+            // Add Search widget
+            var search = new Search({
+                view: view
+            });
+            view.ui.add(search, "top-right"); // Add to the map
+
+            // Find address, this feature
+
+            view.on("click", function(evt){
+                // search.clear();
+                // view.popup.clear();
+                if (search.activeSource) {
+                    var geocoder = search.activeSource.locator; // World geocode service
+                    var params = {
+                        location: evt.mapPoint
+                    };
+                    geocoder.locationToAddress(params)
+                        .then(function(response) { // Show the address found
+                            var address = response.address;
+                            showPopup(address, evt.mapPoint);
+                        }, function(err) { // Show no address found
+                            showPopup("No address found.", evt.mapPoint);
+                        });
+                }
+            });
+
+            function showPopup(address, pt) {
+                view.popup.open({
+                    title:  + Math.round(pt.longitude * 100000)/100000 + ", " + Math.round(pt.latitude * 100000)/100000,
+                    content: address,
+                    location: pt
+                });
+            }
+
+        });
+    </script>
+</head>
+<body>
+<div id="viewDiv"></div>
+<!--this contains esri view-->
+
+
+</body>
+</html>

@@ -1,2 +1,0 @@
-datavis/assets/dataGeo/cMap.geojson filter=lfs diff=lfs merge=lfs -text
-datavis/assets/dataGeo/sMap.geojson filter=lfs diff=lfs merge=lfs -text

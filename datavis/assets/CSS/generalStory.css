@@ -149,6 +149,17 @@ color: black;
     color: white;
 }
 
+/*from SCSS server*/
+img.logo{
+
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    width: 300px;
+    height: auto;
+    opacity: 1;
+}
+
 .navigation2{
     height: 90px !important;
     background-color: #69b8c5;

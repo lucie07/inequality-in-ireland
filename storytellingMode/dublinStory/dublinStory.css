@@ -144,9 +144,7 @@ a, a:hover, a:visited {
     }
 }
 
-
-/*___________*/
-
+/*video opening*/
 
 section {
     position: relative;
@@ -182,14 +180,16 @@ section p {
     font-size: 1.2em;
 }
 
-#videoTxt {
+/*styling from SCSS server*/
+#videoTxt p{
     z-index: 9999;
     display: inline;
     color: #fff;
     position: relative;
-    font-size: 4em;
-    font-family: "Arial Black";
-
+    font-size: 6em;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 /*highcharts*/
